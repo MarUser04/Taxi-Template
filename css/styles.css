@@ -176,4 +176,129 @@ body {
   height: 550px;
   background-image: url("../images/taxi1.jpg");
   background-size: 100% 100%;
-  background-repeat: no-repeat; }
+  background-repeat: no-repeat;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: white; }
+  .principal__titulo {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+    .principal__titulo h1 {
+      font-size: 100px;
+      text-shadow: 2px 2px 4px #000000; }
+    .principal__titulo .go {
+      background: #FCC42D;
+      padding: 10px;
+      border-radius: 50%;
+      color: #434547;
+      border: 2px solid white;
+      -webkit-transition: .7s;
+      transition: .7s; }
+      .principal__titulo .go:hover {
+        cursor: pointer;
+        -webkit-transform: scale(1.1);
+                transform: scale(1.1);
+        -webkit-transition: .7s;
+        transition: .7s; }
+  .principal__precio span {
+    font-size: 50px;
+    text-shadow: 2px 2px 4px #000000; }
+  @media (max-width: 550px) {
+    .principal__titulo h1 {
+      font-size: 80px; }
+    .principal__precio span {
+      font-size: 35px; } }
+  @media (max-width: 360px) {
+    .principal__titulo h1 {
+      font-size: 65px; } }
+
+.vehiculos {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-top: 20px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 20px; }
+  .vehiculos__titulo a {
+    text-decoration: none;
+    color: #FCC42D;
+    font-size: 60px; }
+  .vehiculos__tipos {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap; }
+    .vehiculos__tipos__item {
+      width: 300px;
+      height: auto;
+      margin-top: 20px;
+      border: 2px solid black;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      border-radius: 5px;
+      background: #434547;
+      color: white;
+      text-align: center;
+      color: #FCC42D; }
+      .vehiculos__tipos__item img {
+        width: 100%;
+        height: 200px; }
+      .vehiculos__tipos__item .precio, .vehiculos__tipos__item .calificacion {
+        font-size: 1.2em;
+        margin-bottom: 10px; }
+        .vehiculos__tipos__item .precio i, .vehiculos__tipos__item .calificacion i {
+          margin-right: 5px; }
+      .vehiculos__tipos__item button {
+        width: 45%;
+        -ms-flex-item-align: center;
+            align-self: center;
+        margin-bottom: 10px;
+        padding: 5px;
+        font-family: 'Nunito', sans-serif;
+        font-weight: bold;
+        font-size: 20px;
+        background: white;
+        border: none;
+        border-radius: 10px;
+        -webkit-transition: .7s;
+        transition: .7s; }
+        .vehiculos__tipos__item button:hover {
+          background: #FCC42D;
+          color: white;
+          cursor: pointer;
+          -webkit-transition: .7s;
+          transition: .7s; }
+  @media (max-width: 530px) {
+    .vehiculos__titulo {
+      text-align: center; } }

@@ -209,4 +209,139 @@ $sombra: 2px 2px 4px #000000;
     background-image: url('../images/taxi1.jpg');
     background-size:100% 100%;
     background-repeat: no-repeat;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    color: white;
+
+    &__titulo{
+        display: flex;
+       // margin: 60px;
+        //margin-bottom: 10px;
+        h1{
+            font-size: 100px;
+            text-shadow: $sombra;
+        }
+        .go{
+            background: $amarillo;
+            padding: 10px;
+            border-radius: 50%;
+            color: $gris;
+            border: 2px solid white;
+            transition: .7s;
+            &:hover{
+                cursor: pointer;
+                transform: scale(1.1);
+                transition: .7s;
+            }
+        }
+    }
+    &__precio{
+        span{
+            font-size: 50px;
+            text-shadow: $sombra;
+        }
+    }
+
+    @media(max-width: 550px){
+        &__titulo{
+            //flex-direction: column;
+        //   margin: 10px;
+            h1{
+                font-size: 80px;
+            }
+        }
+        &__precio{
+            span{
+                font-size: 35px;
+            }
+        }
+    }
+
+    @media(max-width: 360px){
+        &__titulo{
+            h1{
+                font-size: 65px;
+            }
+        }
+    }
+}
+
+.vehiculos{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    &__titulo{
+        a{
+            text-decoration: none;
+            color: $amarillo;
+            font-size: 60px;
+          
+        }
+    }
+
+    &__tipos{
+        display: flex;
+        width: 100%;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        &__item{
+            width: 300px;
+            height: auto;
+            margin-top: 20px;
+            border: 2px solid black;
+            display: flex;
+            flex-direction: column;
+            border-radius: 5px;
+            background: $gris;
+            color: white;
+            text-align: center;
+            color: $amarillo;
+            img{
+                width: 100%;
+                height: 200px;
+            }
+            .precio,.calificacion{
+                font-size: 1.2em;
+                margin-bottom: 10px;
+                i{
+                    margin-right: 5px;
+                }
+            }
+            button{
+                width: 45%;
+                align-self: center;
+                margin-bottom: 10px;
+                padding: 5px;
+                font-family: 'Nunito', sans-serif;
+                font-weight: bold;
+                font-size: 20px;
+                background: white;
+                border: none;
+                border-radius: 10px;
+              //  box-shadow: $sombra;
+                transition: .7s;
+                &:hover{
+                    background: $amarillo;
+                    color: white;
+                    cursor: pointer;
+                    transition: .7s;
+                }
+            }
+            
+        }
+    }
+
+    @media(max-width:530px){
+        &__titulo{
+            text-align: center;
+        }
+    }
 }
