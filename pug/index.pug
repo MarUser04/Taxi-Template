@@ -28,7 +28,7 @@ html
                 li.header__nav__item
                     a(href="#vehiculosSection") Vehiculos
                 li.header__nav__item
-                    a(href="#") Paquetes
+                    a(href="#paquetesSection") Paquetes
                 li.header__nav__item
                     a(href="#") App
                 li.header__nav__item
@@ -83,7 +83,7 @@ html
                     button Escoger Taxi
                 .vehiculos__tipos__item
                     img(src="images/taxi_classic.jpg", alt="")
-                    h2 Tipo: Familiar
+                    h2 Tipo: Clasico
                     span.precio Precio: &nbsp;
                         i.fa.fa-usd
                         i.fa.fa-usd
@@ -98,13 +98,46 @@ html
                     button Escoger Taxi
                 .vehiculos__tipos__item
                     img(src="images/taxi_bici.jpg", alt="")
-                    h2 Tipo: Familiar
+                    h2 Tipo: BiciTaxi
                     span.precio Precio: &nbsp;
                         i.fa.fa-usd
                         i.fa.fa-usd
                     span.calificacion Calificacion:&nbsp;
                         i.fa.fa-star
                     button Escoger Taxi
+
+        .paquetes
+            h1.paquetes__titulo
+                a(name="paquetesSection") Nuestros Paquetes
+            
+            .paquetes__packages
+                .paquetes__packages__item#sencillo
+                    span Prime
+                    span 200$ / 24 horas
+                    hr(width="75%" align= "center")
+                    span Vehiculo: Normal - Familiar
+                    hr(width="75%" align= "center")
+                    span Guia Turistico: No 
+                    hr(width="75%" align= "center")
+                    button Obtener
+                .paquetes__packages__item#medio
+                    span Superior
+                    span 600$ / 7 Días
+                    hr(width="75%" align= "center")
+                    span Vehiculo: Normal - Familiar-Clasico
+                    hr(width="75%" align= "center")
+                    span Guia Turistico: Si 
+                    hr(width="75%" align= "center")
+                    button Obtener  
+                .paquetes__packages__item#avanzado
+                    span Exclusivo
+                    span 900$ / 15 Días1
+                    hr(width="75%" align= "center")
+                    span Vehiculo: Todos
+                    hr(width="75%" align= "center")
+                    span Guia Turistico: Si + Guia personalizada 
+                    hr(width="75%" align= "center")
+                    button Obtener  
     script(src="js/jquery.min.js")
     script(src="js/menu.js")
                 

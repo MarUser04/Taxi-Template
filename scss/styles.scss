@@ -12,6 +12,18 @@ $amarillo: #FCC42D;
 $gris: #434547;
 $sombra: 2px 2px 4px #000000; 
 
+@mixin tituloSeccion(){
+      &__titulo{
+        a{
+            text-decoration: none;
+            color: $amarillo;
+            font-size: 60px;
+          
+        }
+    }
+
+}
+
 .header{
     width: 100%;
     height: 120px;
@@ -257,6 +269,7 @@ $sombra: 2px 2px 4px #000000;
         &__precio{
             span{
                 font-size: 35px;
+                text-align: center;
             }
         }
     }
@@ -278,15 +291,8 @@ $sombra: 2px 2px 4px #000000;
     justify-content: center;
     align-items: center;
     margin-bottom: 20px;
-    &__titulo{
-        a{
-            text-decoration: none;
-            color: $amarillo;
-            font-size: 60px;
-          
-        }
-    }
-
+  
+    @include tituloSeccion();
     &__tipos{
         display: flex;
         width: 100%;
@@ -343,5 +349,111 @@ $sombra: 2px 2px 4px #000000;
         &__titulo{
             text-align: center;
         }
+    }
+}
+
+.paquetes{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    background: $gris;
+    padding-bottom: 30px;
+    @include tituloSeccion();
+
+    @media(max-width: 520px){
+        h1{
+            text-align: center;
+        }
+    }
+
+    &__packages{
+        display: flex;
+    
+        justify-content: space-around;
+        width: 100%;
+        flex-wrap: wrap;
+
+        &__item{
+            border: 1px solid white;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+           // padding: 20px; 
+           width: 300px; 
+           border-radius: 2px;
+           background: white;
+           box-shadow: $sombra;
+           margin-right: 30px;
+           margin-bottom: 20px;
+           margin-left: 20px;
+            span{
+                height: 80px;
+                padding-top: 30px;
+                font-size: 1.3em;
+                font-weight: bold;
+              //   margin-bottom: 10px;
+                // padding-bottom: 0px;
+                &:first-child{
+                    background: $amarillo;
+                    padding-top: 20px;
+                    font-size: 2em;
+                    font-weight: bold;
+                    color: $gris;
+                }
+            }
+
+            button{
+                width: 60%;
+                align-self: center;
+                margin-top: 10px;
+                margin-bottom: 12px;
+                border: none;
+                background: $gris;
+                color: $amarillo;
+                font-size: 1.3em;
+                padding: 5px;
+                border-radius: 25px;
+                transition: .8s;
+                border: 2px solid $amarillo;
+                &:hover{
+                    background: $amarillo;
+                    color: white;
+                    cursor: pointer;
+                    transition: .8s;
+                }
+            }
+
+            @media(max-width: 1044px){
+                margin-left: 50px;
+            }
+        }//item
+
+       
+        #medio{
+            span{
+                &:first-child{
+                    background: $gris;
+                    padding-top: 20px;
+                    font-size: 2em;
+                    font-weight: bold;
+                    color: $amarillo;
+                }
+            }
+
+            button{
+                background: $amarillo;
+                color: $gris;
+                border: 2px solid $gris;
+                &:hover{
+                    background: $gris;
+                    color: $amarillo;
+                }
+            }
+        }
+        
     }
 }
