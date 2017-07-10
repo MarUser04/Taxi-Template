@@ -22,6 +22,29 @@ $sombra: 2px 2px 4px #000000;
         }
     }
 
+
+}
+@mixin boton1(){
+    button{
+                width: 60%;
+                align-self: center;
+                margin-top: 10px;
+                margin-bottom: 12px;
+                border: none;
+                background: $gris;
+                color: $amarillo;
+                font-size: 1.3em;
+                padding: 5px;
+                border-radius: 25px;
+                transition: .8s;
+                border: 2px solid $amarillo;
+                &:hover{
+                    background: $amarillo;
+                    color: white;
+                    cursor: pointer;
+                    transition: .8s;
+                }
+            }
 }
 
 .header{
@@ -412,26 +435,7 @@ $sombra: 2px 2px 4px #000000;
                 }
             }
 
-            button{
-                width: 60%;
-                align-self: center;
-                margin-top: 10px;
-                margin-bottom: 12px;
-                border: none;
-                background: $gris;
-                color: $amarillo;
-                font-size: 1.3em;
-                padding: 5px;
-                border-radius: 25px;
-                transition: .8s;
-                border: 2px solid $amarillo;
-                &:hover{
-                    background: $amarillo;
-                    color: white;
-                    cursor: pointer;
-                    transition: .8s;
-                }
-            }
+            @include boton1();
 
             @media(max-width: 1044px){
                 margin-left: 50px;
@@ -592,4 +596,214 @@ $sombra: 2px 2px 4px #000000;
             }
         }
     }
+}
+
+.caracteristicas{
+
+     width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+  background: $gris;
+    padding-bottom: 30px;
+    @include tituloSeccion();
+    
+    #slides{
+        position: relative;
+        height: 450px;
+        padding: 0px;
+        margin: 0px;
+        list-style: none;
+        width: 100%;
+
+    }
+
+    .slide{
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        z-index: 1;
+
+        transition: opacify 1s;
+
+       
+        padding: 40px;
+        box-sizing: border-box;
+        background: #333;
+        color: #fff;
+
+        display: flex;
+       .info{
+           width: 50%;
+           display: flex;
+           flex-direction: column;
+           text-align: center;
+           margin: 10px;
+           height: auto;
+          // margin-top: 40px;
+           //margin-right: 30px;
+           span{
+               font-size: 3em;
+               font-weight: bold;
+           }
+
+           p{
+               font-size: 1.2em;
+           }
+           //@include boton1();
+           button{
+               font-size: 1em;
+               width: 160px;
+               align-self: center;
+               padding: 10px;
+               border: none;
+               background: $gris;
+               color: white;
+               border-radius: 25px;
+               transition: .7s;
+               &:hover{
+                   color: $gris;
+                   background: white;
+                   border: 2px solid $gris;
+                   cursor: pointer;
+                   transition: .7s;
+               }
+           }
+           
+       }
+        img{
+            height: 100%;
+            width: 500px;
+            box-shadow: $sombra;
+        }
+
+        &:nth-of-type(1), &:nth-of-type(3){
+            background: $amarillo;
+            color: $gris;
+        }
+         &:nth-of-type(2), &:nth-of-type(4){
+            background: white;
+            color: $amarillo;
+
+            button{
+                background: $amarillo;
+                color:white;
+                &:hover{
+                    color: $amarillo;
+                    border: 2px solid $amarillo;
+                    background: white;
+                }
+            }
+        }
+    }
+
+    .showing{
+        opacity: 1;
+        z-index: 2;
+    }
+
+    @media(max-width: 1050px){
+        height: 1000px;
+
+        #slides{
+            height: 900px;
+        }
+        .slide{
+            flex-direction: column;
+            
+            .info{
+                height: 50%;
+                justify-content: center;
+            align-self: center;
+            margin-top: 10px;
+                width: 80%;
+                span{
+                    font-size: 60px;
+                }
+
+                .titulo3{
+                    font-size: 45px;
+                }
+            }
+            img{
+               height: 50%;
+                    justify-content: center;
+            align-self: center;
+            }
+
+          
+        }
+        
+    }
+
+    @media(max-width: 730px){
+        height: 1300px;
+
+        #slides{
+            height: 1200px;
+        }
+        .slide{
+            img{
+                width: 95%;
+            }
+        }
+    }
+      @media(max-width: 520px){
+        height: 1200px;
+     
+        #slides{
+            height: 1300px;
+        }
+        .slide{
+            width: 100%;
+            .info{
+                justify-content: flex-start;
+                margin-top: 10px;
+                width: 80%;
+                span{
+                    font-size:2.2em;
+                }
+                p{
+                    font-size: 1.3em;
+                }
+                .titulo3{
+                    font-size: 1.9em;
+                }
+            }
+            img{
+                justify-content: flex-start;
+                margin-top: 30px;
+                height: 400px;
+                width: 100%;
+                margin: 0px;
+            }
+        }
+    }
+
+    @media(max-width: 450px){
+        height: 1300px;
+     
+        #slides{
+            height: 1400px;
+        }
+    }
+    @media(max-width: 410px){
+        height: 1450px;
+     
+        #slides{
+            height: 1550px;
+        }
+    }
+
+     @media(max-width:820px){
+        &__titulo{
+            text-align: center;
+        }
+     }
 }
